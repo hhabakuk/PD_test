@@ -1,5 +1,5 @@
 body {
-  background-color: 
+  background-color: linen;
 }
 
 nav {
@@ -34,7 +34,7 @@ nav ul li {
 .title {
 display: inline-block;
 width: 32%;
-margin-left: 20px;
+margin-left: 2%;
 
 
 
@@ -42,7 +42,10 @@ margin-left: 20px;
 }
 
 .details-background {
-  background-color: blue;
+  background-color: white;
+  margin-left: 27%;
+  border-radius: 2px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px #888888;
 
 
 
@@ -51,9 +54,15 @@ margin-left: 20px;
 table {
 
   display: inline-block;
-  width: 32%;
+  width: 41%;
   margin-left: 20px;
   padding: 20px 0px 20px 0px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+
+
+    
 
 }
 
@@ -74,6 +83,39 @@ table.client-deals > tbody > tr > th {
   width: 200px;
   
 }
+
+table.client-deals > tbody {
+
+  border: 3px solid black;
+  border-radius: 5px;
+  
+
+  
+}
+
+table.client-deals > tbody > tr {
+  border: 1px solid black;
+}
+
+
+
+table.client-deals > tbody > tr:nth-child(even){background: #FFF;
+}
+
+table.client-deals > tbody > tr:nth-child(odd){
+  background: #CCC;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
