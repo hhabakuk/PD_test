@@ -1,0 +1,66 @@
+body {
+  background-color: 
+}
+
+nav {
+  background-color: black;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: 20 px;
+}
+
+nav ul li {
+  margin: 20px;
+}
+
+.main {
+  display: flex;
+}
+
+.sidebar {
+  float: left;
+  background-color: pink;
+  height: 100vh;
+  width: 25%;
+}
+
+.name {
+  padding-top: 21.440px;
+}
+
+
+.client-details {
+  height: 100vh;
+  padding: 0px 20px 20px 20px;
+}
+
+.client-deals {
+
+  height: 100vh;
+  padding: 0px 20px 20px 20px;
+
+}
+
+th {
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
