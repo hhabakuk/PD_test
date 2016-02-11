@@ -18,7 +18,7 @@ nav ul li {
 }
 
 
-.sidebar {
+#sidebar {
   float: left;
   background-color: pink;
   height: 100vh;
@@ -27,8 +27,17 @@ nav ul li {
 
 }
 
-.name {
-  padding-top: 21.440px;
+.client {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+
+}
+
+.client:hover {
+  background-color: blue;
 }
 
 .title {

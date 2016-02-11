@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Test task</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -16,25 +16,36 @@
     </ul>
   </nav>
 
-  <div class="main">
-    
-    <div class="sidebar">
-      <div class="client">
-        <div class="name">
-        Jürgen Mürgen
-        </div>
-        <div class="company">
-        Kogrepüüdjad
-        </div>
-      
-    </div>
+
+<div id="sidebar"></div>
+
+<div id="content">
+
+</div>
+
+<!-- Templates -->
+
+<script type="text/template" id="tpl-client-name-list">
+
+  <div class="sidebar">
+    <a href='#client/<%= id %>'>
+      <div class="client"> 
+          <div class="name">
+            <%= name %>
+          </div>
+          <div class="company">
+            <%= email %>
+          </div>
+      </div>
+    </a>
   </div>
 
-  <div class="main">
 
-  
-      
-      <div class="title client-name">
+</script>
+
+<script type="text/template" id="tpl-client-details">
+
+<div class="title client-name">
 
         <h1>Henrius Maximus</h1>
 
@@ -45,50 +56,52 @@
       </div>
 
       <div class="details-background">
-      <table class="client-details">
+
+    <table class="client-details">
       <tr>
-        <th>Phone</th>
-        <td>+348342</th>
+        <th>Name: </th>
+        <td><%= name %></th>
       </tr>
       <tr>
-        <th>e-mail</td>
-        <td>hess@gmail.com</td>
+        <th>Id: </td>
+        <td><%= id %></td>
       </tr>
        <tr>
-        <th>e-mail</td>
-        <td>hess@gmail.com</td>
+        <th>Username: </td>
+        <td><%= username %></td>
       </tr>
     </table>
-        
-  
+
     <table class="client-deals">
     <tr>
-      <th>Limpa joogid</th>
-      <td>422 $</th>
+      <th>Street</th>
+      <td><%= address.street %></th>
     </tr>
     <tr>
-      <th>Limodaadid</td>
-      <td>122 $</td>
+      <th>City</td>
+      <td><%= address.city %></td>
     </tr>
-     <tr>
-        <th>e-mail</td>
-        <td>hess@gmail.com</td>
-      </tr>
   </table>
 
+    </div>
 
 
-      </div>
-        
-        
-      
-        
+</script>
 
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js">
+ </script>
 
-  </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
-  
-  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+
+  <script src="js/models/client.js"></script>
+  <script src="js/collections/clients.js"></script>
+  <script src="js/views/clientDetailsView.js"></script>
+  <script src="js/views/clientOneView.js"></script>
+  <script src="js/views/clientsView.js"></script>
+  <script src="js/router.js"></script>
  
 
 </body>
