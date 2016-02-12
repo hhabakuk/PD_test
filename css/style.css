@@ -106,20 +106,26 @@ table.client-deals > tbody > tr > th {
   
 }
 
-table.client-deals > tbody > tr > td {
+table#deals.client-deals > tbody > tr > td {
 
   text-align: right;
   
   
 }
 
-table.client-deals > tbody > tr:nth-child(even){background: #FFF;
+#deals > div > div:nth-child(even) tr {
+
+background: #FFF;
+
 }
 
-table.client-deals > tbody > tr:nth-child(odd){
+#deals > div > div:nth-child(odd) > tr {
+
   background: #CCC;
 
 }
+
+
 
 
 

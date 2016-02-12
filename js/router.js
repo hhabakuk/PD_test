@@ -3,7 +3,7 @@ var AppRouter = Backbone.Router.extend({
     routes:{
 
         "":"list",
-        "client/:id":"clientDetails"
+        "client/:id/":"clientDetails"
     },
 
     list:function () {
@@ -28,17 +28,19 @@ var AppRouter = Backbone.Router.extend({
 
 
     clientDetails:function (id) {
+
         if (this.clientList) {
 
             this.client = this.clientList.get(id);
-            this.deals = new Deals();
+        
+            this.deals = new Deals(); // where org_id = org_id
+          
 
             var self = this;
 
             this.deals.fetch({
             success:function () {
                 self.dealsList = new DealsList({ model:self.deals });
-                // console.log(self.clientListView) // siit tuleb välja see model.models
                 $('#deals').html(self.dealsList.render().el);
             }
         });
