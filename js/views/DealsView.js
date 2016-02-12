@@ -1,6 +1,6 @@
-window.ClientDetailsView = Backbone.View.extend({
+DealsView = Backbone.View.extend({
 
-    template:_.template($('#tpl-client-details').html()),
+    template:_.template($('#tpl-client-deals').html()),
 
     render:function () {
         $(this.el).html(this.template(this.model.toJSON()));
@@ -12,8 +12,3 @@ window.ClientDetailsView = Backbone.View.extend({
         $(this.el).empty();
     }
 });
-
-
-
-
-
