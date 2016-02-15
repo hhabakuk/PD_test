@@ -1,4 +1,6 @@
-window.Client = Backbone.Model.extend();
+Client = Backbone.Model.extend();
+
+
 
 
 

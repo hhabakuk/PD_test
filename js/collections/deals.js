@@ -6,7 +6,7 @@ Deals = Backbone.Collection.extend({
 
    parse : function(response){
         console.log('C', response.data);
-        console.log('D', response.data[0]);
+        console.log('D', response.data[0].title);
         return response.data;
     }
 

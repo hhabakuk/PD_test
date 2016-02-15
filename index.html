@@ -3,31 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Test task</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+ 
+<nav>
+  
+<ul>
 
-  <nav>
-    <ul>
-      <li>Pipedrive</li>
-      <li>Deals</li>
-      <li>Activities</li>
-      <li>User</li>
-    </ul>
-  </nav>
+  <li><a id="logo" href="#">Pipedrive</a></li>
 
+  <li><a id="deals" href="#">
+    <span id="deals_logo"></span>
+    <span id="label">Deals</span>
+  </a></li>
+
+   <li><a id="activities" href="#">
+    <span id="activities_logo"></span>
+    <span id="label">Activities</span>
+  </a></li>
+
+
+   <li><a id="clients" href="#">
+    <span id="clients-icon"></span>
+  </a></li>
+
+
+   <li><a id="organisations" href="#">
+    <span id="organisations-icon"></span>
+  </a></li>
+
+  <li id="user" ><a  href="#">
+    <span id="user-module">
+    <span id="user-picture"></span>
+    <span id="username">
+    <span id="label">kasutaja</span>
+    <span id="company">Firma</span> 
+    </span>
+    <span id="arrow_down"></span>
+    </span>
+  </a></li>
+
+</ul>
+  
+</nav>
 
 <div id="sidebar"></div>
 
+<div id="details"></div>
 
-<div id="content"></div>
+
 
 <!-- Templates -->
 
 <script type="text/template" id="tpl-client-name-list">
 
   <div class="sidebar">
-    <a href='#client/<%= id %>/'>
+    <a id = "hello" href='#client/<%= id %>/'>
       <div class="client"> 
           <div class="name">
             <%= name %>
@@ -42,55 +75,79 @@
 
 </script>
 
+
 <script type="text/template" id="tpl-client-details">
 
-<div class="title client-name">
+<div class="title" id="client-name">
 
-        <h1><%= name %></h1>
+        <h1 ><%= name %></h1>
 
       </div>
 
-      <div class="title deals">
+      <div class="title" id="deals-title">
         <h1>Deals</h1>
       </div>
+</div>
 
-      <div class="details-background">
+<div class="details-background">
 
     <table class="client-details">
       <tr>
-        <th>Name: </th>
-        <td><%= name %></th>
+        <th>Phone</th>
+        <td><%= typeof(phone.value)!== 'undefined' ?  name : 'no phone number added' %></th>
       </tr>
       <tr>
-        <th>Org_Id: </td>
-        <td><%= org_id.value %></td>
+        <th>E-mail</td>
+        <td><%= typeof(email.value)!== 'undefined' ?  org_id.value : 'no e-mail address added' %></td>
       </tr>
+
        <tr>
-        <th>Add </td>
-        <td><%= add_time %></td>
+        <th>Added </td>
+        <td><%= typeof(add_time)!== 'undefined' ?  add_time : 'add time unknown' %></td>
+      </tr>
+
+      <tr>
+        <th>Open deals</td>
+        <td><%= open_deals_count %></td>
+      </tr>
+
+      <tr>
+        <th>Next activity</td>
+        <td><%= next_activity_date %></td>
+      </tr>
+      <tr>
+        <th>Last activity</td>
+        <td><%= last_activity_date %></td>
       </tr>
     </table>
 
+<div id="deals-table"></div>
+
+  </div>
+
+
     </script>
 
-    
 
+        <table>
 
-
-    <table id="deals" class="client-deals">
 <script type="text/template" id="tpl-client-deals">
+
+
     <tr>
       <th><%= title %></th>
       <td><%= formatted_value %></td>
     </tr>
+  
 </script>
-    </tr>
-   
+  </table >
 
 
 
 
 
+ 
+  
  
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js">
  </script>
