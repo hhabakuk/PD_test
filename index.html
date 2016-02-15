@@ -94,11 +94,11 @@
     <table class="client-details">
       <tr>
         <th>Phone</th>
-        <td><%= typeof(phone.value)!== 'undefined' ?  name : 'no phone number added' %></th>
+        <td><%= typeof(phone.value)!== 'undefined' ?  org_id.value : '+372 55555555' %></th>
       </tr>
       <tr>
         <th>E-mail</td>
-        <td><%= typeof(email.value)!== 'undefined' ?  org_id.value : 'no e-mail address added' %></td>
+        <td><%= typeof(email.value)!== 'undefined' ?  org_id.value : 'test@email.com' %></td>
       </tr>
 
        <tr>
@@ -157,14 +157,15 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
 
   <script src="js/models/client.js"></script>
+
   <script src="js/collections/clients.js"></script>
   <script src="js/collections/deals.js"></script>
+  
   <script src="js/views/ClientDetailsView.js"></script>
   <script src="js/views/ClientListViewMaker.js"></script>
   <script src="js/views/ClientNameListView.js"></script>
 
    <script src="js/views/DealsList.js"></script>
-  <script src="js/views/DealsView.js"></script>
   <script src="js/views/DealsViewMaker.js"></script>
   <script src="js/router.js"></script>
  

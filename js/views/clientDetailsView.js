@@ -8,7 +8,6 @@ ClientDetailsView = Backbone.View.extend({
     },
     
     close:function () {
-        $(this.el).unbind();
         $(this.el).empty();
     }
 });

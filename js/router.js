@@ -10,12 +10,12 @@ var AppRouter = Backbone.Router.extend({
     list:function () {
 
         this.clientList = new ClientList();
-        
 
         var self = this;
 
         this.clientList.fetch({
             success:function () {
+
                 self.clientListView = new ClientListView({model:self.clientList});
 
                 $('#sidebar').html(self.clientListView.render().el);
@@ -38,7 +38,6 @@ var AppRouter = Backbone.Router.extend({
 
             var clientId = id
 
-
             this.deals = new Deals(); 
           
 
@@ -57,7 +56,7 @@ var AppRouter = Backbone.Router.extend({
             if (this.clientDetailsView) this.clientDetailsView.close();
            
 
-            this.clientDetailsView = new ClientDetailsView({model:this.client});
+            this.clientDetailsView = new ClientDetailsView({model : this.client});
 
       
             $('#details').html(this.clientDetailsView.render().el);
@@ -76,9 +75,8 @@ var app = new AppRouter();
 
 
 
-   
-
-
-
-
 Backbone.history.start();
+
+
+
+
